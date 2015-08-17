@@ -1,0 +1,17 @@
+//
+//  WTXMMicroblog.pch
+//  WTXMMicroblog
+//
+//  Created by 王涛 on 15/1/1.
+//  Copyright (c) 2015年 王涛. All rights reserved.
+//
+
+#ifndef WTXMMicroblog_WTXMMicroblog_pch
+#define WTXMMicroblog_WTXMMicroblog_pch
+
+#import "WTXMSkinImage.h"
+#import "UIView+WTXM.h"
+#import "UIBarButtonItem+WTXM.h"
+#import "UIView+Inspectable.h"
+
+#endif

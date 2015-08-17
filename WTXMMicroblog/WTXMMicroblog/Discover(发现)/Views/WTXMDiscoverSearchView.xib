@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="WTXMDiscoverSearchView">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="35"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l0R-et-XVV">
+                    <rect key="frame" x="255" y="0.0" width="45" height="35"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="取消">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="爱搜不搜!" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UuJ-lf-qH9">
+                    <rect key="frame" x="0.0" y="0.0" width="300" height="35"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="UuJ-lf-qH9" secondAttribute="bottom" id="1RN-Xl-6gB"/>
+                <constraint firstItem="l0R-et-XVV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="255" id="8CR-lX-0Eg"/>
+                <constraint firstAttribute="trailing" secondItem="l0R-et-XVV" secondAttribute="trailing" id="A2R-A9-PdZ"/>
+                <constraint firstItem="l0R-et-XVV" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Bzg-Jy-dpo"/>
+                <constraint firstAttribute="bottom" secondItem="l0R-et-XVV" secondAttribute="bottom" id="CMG-0Y-yed"/>
+                <constraint firstItem="UuJ-lf-qH9" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="FUf-Y8-q3F"/>
+                <constraint firstAttribute="trailing" secondItem="UuJ-lf-qH9" secondAttribute="trailing" id="FZ5-t8-uF4"/>
+                <constraint firstItem="UuJ-lf-qH9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Niu-kN-Z6T"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="cancleButton" destination="l0R-et-XVV" id="ycX-Ku-8Z1"/>
+                <outlet property="searchText" destination="UuJ-lf-qH9" id="t7a-TG-LHl"/>
+                <outlet property="searchTextRightConstraints" destination="FZ5-t8-uF4" id="KsF-CJ-EBx"/>
+            </connections>
+            <point key="canvasLocation" x="138" y="259.5"/>
+        </view>
+    </objects>
+</document>
