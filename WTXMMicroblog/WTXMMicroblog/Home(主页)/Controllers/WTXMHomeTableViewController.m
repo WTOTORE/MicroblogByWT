@@ -17,11 +17,6 @@
 - (instancetype)init {
     if (self=[super init]) {
         self.homeBtn=[[WTXMHomeButton alloc] init];
-        [self.homeBtn setTitle:@"首页" forState: UIControlStateNormal];
-        [self.homeBtn setImage:[WTXMSkinImage skinImageNamed:@"navigationbar_arrow_down"] forState:UIControlStateNormal];
-        [self.homeBtn setImage:[WTXMSkinImage skinImageNamed:@"navigationbar_arrow_up"] forState:UIControlStateSelected];
-        [self.homeBtn sizeToFit];
-        [self.homeBtn addTarget:self action:@selector(homeTitleButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
         self.navigationItem.titleView=self.homeBtn;
         self.navigationItem.leftBarButtonItem=[UIBarButtonItem itemWithImageName:@"navigationbar_friendsearch" target:self action:@selector(friendsearch)];
         self.navigationItem.rightBarButtonItem=[UIBarButtonItem itemWithImageName:@"navigationbar_pop" target:self action:@selector(pop)];
@@ -35,18 +30,7 @@
 - (void) pop {
     
 }
-/**
- *  首页标题按钮的点击事件
- *
- *  @param button 标题按钮
- */
-- (void)homeTitleButtonClicked:(UIButton *)button {
-    if (button.selected) {
-        button.selected=NO;
-    }else {
-    button.selected=YES;
-    }
-}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 }

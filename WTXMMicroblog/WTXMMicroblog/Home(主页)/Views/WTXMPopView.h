@@ -1,14 +1,14 @@
 //
-//  WTXMHomeButton.h
+//  WTXMPopView.h
 //  WTXMMicroblog
 //
-//  Created by 王涛 on 15/1/1.
+//  Created by 王涛 on 15/8/18.
 //  Copyright (c) 2015年 王涛. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface WTXMHomeButton : UIButton
+@interface WTXMPopView : UIButton
 - (instancetype) initWithCustomView:(UIView *)customView;
 - (void)showWithTargetView:(UIView *)targetView;
 @end

@@ -24,6 +24,10 @@
 		069DDDA61A55582E00163661 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 069DDDA51A55582E00163661 /* Images.xcassets */; };
 		069DDDA91A55582E00163661 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 069DDDA71A55582E00163661 /* LaunchScreen.xib */; };
 		069DDDB51A55582F00163661 /* WTXMMicroblogTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 069DDDB41A55582F00163661 /* WTXMMicroblogTests.m */; };
+		06E60BEA1B82F4E3009D1759 /* FIR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E60BE91B82F4E3009D1759 /* FIR.framework */; };
+		06E60BED1B82F5DA009D1759 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E60BEC1B82F5DA009D1759 /* SystemConfiguration.framework */; };
+		06E60BF01B8310C7009D1759 /* WTXMPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E60BEF1B8310C7009D1759 /* WTXMPopView.m */; };
+		06E60BF31B8314B2009D1759 /* WTXMGuideController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E60BF21B8314B2009D1759 /* WTXMGuideController.m */; };
 		06F5DAE61B7E12DC000E0391 /* WTXMHomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F5DAE51B7E12DC000E0391 /* WTXMHomeTableViewController.m */; };
 		06F5DAE91B7E1375000E0391 /* WTXMMessageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F5DAE81B7E1375000E0391 /* WTXMMessageTableViewController.m */; };
 		06F5DAEC1B7E13FB000E0391 /* WTXMProfileTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F5DAEB1B7E13FB000E0391 /* WTXMProfileTableViewController.m */; };
@@ -73,6 +77,12 @@
 		069DDDAE1A55582F00163661 /* WTXMMicroblogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WTXMMicroblogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		069DDDB31A55582F00163661 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		069DDDB41A55582F00163661 /* WTXMMicroblogTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WTXMMicroblogTests.m; sourceTree = "<group>"; };
+		06E60BE91B82F4E3009D1759 /* FIR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FIR.framework; path = ../FIR.framework; sourceTree = "<group>"; };
+		06E60BEC1B82F5DA009D1759 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		06E60BEE1B8310C7009D1759 /* WTXMPopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTXMPopView.h; sourceTree = "<group>"; };
+		06E60BEF1B8310C7009D1759 /* WTXMPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTXMPopView.m; sourceTree = "<group>"; };
+		06E60BF11B8314B2009D1759 /* WTXMGuideController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTXMGuideController.h; sourceTree = "<group>"; };
+		06E60BF21B8314B2009D1759 /* WTXMGuideController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTXMGuideController.m; sourceTree = "<group>"; };
 		06F5DAE41B7E12DC000E0391 /* WTXMHomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTXMHomeTableViewController.h; sourceTree = "<group>"; };
 		06F5DAE51B7E12DC000E0391 /* WTXMHomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTXMHomeTableViewController.m; sourceTree = "<group>"; };
 		06F5DAE71B7E1375000E0391 /* WTXMMessageTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTXMMessageTableViewController.h; sourceTree = "<group>"; };
@@ -86,6 +96,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06E60BED1B82F5DA009D1759 /* SystemConfiguration.framework in Frameworks */,
+				06E60BEA1B82F4E3009D1759 /* FIR.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +263,8 @@
 		063394FF1B7CBC4900898E73 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				06E60BF11B8314B2009D1759 /* WTXMGuideController.h */,
+				06E60BF21B8314B2009D1759 /* WTXMGuideController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -315,6 +329,8 @@
 			children = (
 				06044D9F1A54C83500424A7B /* WTXMHomeButton.h */,
 				06044DA01A54C83500424A7B /* WTXMHomeButton.m */,
+				06E60BEE1B8310C7009D1759 /* WTXMPopView.h */,
+				06E60BEF1B8310C7009D1759 /* WTXMPopView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -471,6 +487,7 @@
 		069DDD971A55582E00163661 /* WTXMMicroblog */ = {
 			isa = PBXGroup;
 			children = (
+				06E60BEB1B82F593009D1759 /* Framework */,
 				063394EF1B7CBC4900898E73 /* Common(公共部分) */,
 				063394F41B7CBC4900898E73 /* Compose(组成) */,
 				063394F91B7CBC4900898E73 /* Discover(发现) */,
@@ -510,6 +527,15 @@
 				069DDDB31A55582F00163661 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		06E60BEB1B82F593009D1759 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				06E60BEC1B82F5DA009D1759 /* SystemConfiguration.framework */,
+				06E60BE91B82F4E3009D1759 /* FIR.framework */,
+			);
+			path = Framework;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -614,8 +640,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06E60BF31B8314B2009D1759 /* WTXMGuideController.m in Sources */,
 				069B607A1A5500C000A3518B /* UIView+WTXM.m in Sources */,
 				06044DA11A54C83500424A7B /* WTXMHomeButton.m in Sources */,
+				06E60BF01B8310C7009D1759 /* WTXMPopView.m in Sources */,
 				06044DA51A54E2E100424A7B /* WTXMSkinImage.m in Sources */,
 				0633951F1B7CBDA100898E73 /* WTXMBasicNavigationController.m in Sources */,
 				063395191B7CBC4900898E73 /* AppDelegate.m in Sources */,
@@ -759,6 +787,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WTXMMicroblog",
+				);
 				INFOPLIST_FILE = WTXMMicroblog/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -771,6 +803,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WTXMMicroblog",
+				);
 				INFOPLIST_FILE = WTXMMicroblog/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

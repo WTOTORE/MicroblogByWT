@@ -8,7 +8,7 @@
 
 #ifndef WTXMMicroblog_WTXMMicroblog_pch
 #define WTXMMicroblog_WTXMMicroblog_pch
-
+#define kVersion @"Version"
 #import "WTXMSkinImage.h"
 #import "UIView+WTXM.h"
 #import "UIBarButtonItem+WTXM.h"
