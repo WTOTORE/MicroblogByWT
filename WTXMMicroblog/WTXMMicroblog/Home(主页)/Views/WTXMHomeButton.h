@@ -9,6 +9,4 @@
 #import <UIKit/UIKit.h>
 
 @interface WTXMHomeButton : UIButton
-- (instancetype) initWithCustomView:(UIView *)customView;
-- (void)showWithTargetView:(UIView *)targetView;
 @end

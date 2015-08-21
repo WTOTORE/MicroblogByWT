@@ -7,7 +7,7 @@
 //
 
 #import "WTXMGuideController.h"
-#import "WTXMMainTabBarController.h"
+#import "AppDelegate.h"
 #define kCount 4
 @interface WTXMGuideController ()<UIScrollViewDelegate>
 @property (nonatomic,weak) UIPageControl *pageCtrl;
@@ -75,7 +75,7 @@
 - (void) enterButtonClicked:(UIButton *)button {
     NSString *currentVersion = [NSBundle mainBundle].infoDictionary[@"CFBundleShortVersionString"];
     [[NSUserDefaults standardUserDefaults] setValue:currentVersion forKey:kVersion];
-    [UIApplication sharedApplication].keyWindow.rootViewController=[WTXMMainTabBarController new];
+    [WTXMWindowTool chooseRootViewController];
 }
 - (void) chooseButtonClicked:(UIButton *)button {
     button.selected=!button.selected;

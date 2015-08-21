@@ -39,6 +39,7 @@
     [window addSubview:self];
 }
 - (void) hide:(UIButton *)button {
+    self.buttonClicked();
     [self removeFromSuperview];
 }
 

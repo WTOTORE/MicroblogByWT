@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface WTXMPopView : UIButton
+@property (nonatomic,copy) void (^buttonClicked)();
 - (instancetype) initWithCustomView:(UIView *)customView;
 - (void)showWithTargetView:(UIView *)targetView;
 @end

@@ -13,6 +13,7 @@
 #import "WTXMDiscoverTableViewController.h"
 #import "WTXMProfileTableViewController.h"
 #import "WTXMBasicNavigationController.h"
+#import "UITabBarItem+BadgeValueImage.h"
 
 
 @interface WTXMMainTabBarController ()<WTXMTabBarDelegate>
@@ -31,7 +32,6 @@
     tabBar.delegate=self;
     [self setValue:tabBar forKey:@"tabBar"];
     self.tabBar.tintColor=[UIColor orangeColor];
-
 }
 - (void) setNavigationControllers {
     WTXMHomeTableViewController *navHome=[[WTXMHomeTableViewController alloc] init];
@@ -49,6 +49,8 @@
     NSString *sel=[NSString stringWithFormat:@"tabbar_%@_selected",imageName];
     [viewController.tabBarItem setImage:[WTXMSkinImage skinImageNamed:nor]];
     [viewController.tabBarItem setSelectedImage:[WTXMSkinImage skinImageNamed:sel]];
+    viewController.tabBarItem.badgeImageName=@"main_badge";
+
     [self addChildViewController:[[WTXMBasicNavigationController alloc] initWithRootViewController:viewController]];
 }
 - (void)didReceiveMemoryWarning {

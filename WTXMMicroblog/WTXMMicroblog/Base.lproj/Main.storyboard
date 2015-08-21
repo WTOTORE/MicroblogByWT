@@ -4,39 +4,5 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
-    <scenes>
-        <!--View Controller-->
-        <scene sceneID="xFc-qV-Coz">
-            <objects>
-                <viewController id="rcj-im-t8b" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="1yK-r1-dZB"/>
-                        <viewControllerLayoutGuide type="bottom" id="dx1-4E-fMj"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="73G-lJ-kbG">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Co8-Gb-U5d">
-                                <rect key="frame" x="33" y="28" width="600" height="44"/>
-                                <items>
-                                    <navigationItem title="Title" id="Tew-D4-2a8">
-                                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="add" id="Ja0-TH-REc"/>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="loc-Ng-l4j">
-                                <rect key="frame" x="296" y="302" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wRL-Yf-bgP" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-206" y="295"/>
-        </scene>
-    </scenes>
+    <scenes/>
 </document>

@@ -7,9 +7,9 @@
 //
 
 #import "AppDelegate.h"
-#import "WTXMMainTabBarController.h"
 #import <FIR/FIR.h>
 #import "WTXMGuideController.h"
+#import "WTXMLoginSinaController.h"
 @interface AppDelegate ()
 
 @end
@@ -18,16 +18,21 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+     [FIR handleCrashWithKey:@"6d4c29d371d969bb33f22735ba8967b2"];
+    UIUserNotificationSettings *settings=[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeBadge categories:nil];
+    [application registerUserNotificationSettings:settings];
+    
     self.window=[[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     NSString *version = [[NSUserDefaults standardUserDefaults] valueForKey:kVersion];
     NSString *currentVersion = [NSBundle mainBundle].infoDictionary[@"CFBundleShortVersionString"];
+    
     if (!version||[version compare:currentVersion]==NSOrderedAscending) {
         self.window.rootViewController=[[WTXMGuideController alloc] init];
     }else {
-    self.window.rootViewController=[[WTXMMainTabBarController alloc] init];
+        [WTXMWindowTool chooseRootViewController];
     }
     [self.window makeKeyAndVisible];
-    [FIR handleCrashWithKey:@"6d4c29d371d969bb33f22735ba8967b2"];
+   
     return YES;
 }
 

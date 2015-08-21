@@ -33,14 +33,14 @@
  *  @param button 标题按钮
  */
 - (void)homeTitleButtonClicked:(UIButton *)button {
-    if (button.selected) {
-        button.selected=NO;
-    }else {
-        button.selected=YES;
-    }
+    button.selected=!button.selected;
     UIView *view=[[UIView alloc] initWithFrame:CGRectMake(5, 12, 100, 100)];
     view.backgroundColor=[UIColor redColor];
     WTXMPopView *pop=[[WTXMPopView alloc] initWithCustomView:view];
+    __weak WTXMHomeButton *myself=self;
+    pop.buttonClicked=^{
+        myself.selected=!myself.selected;
+    };
     [pop showWithTargetView:button];
 }
 - (void)layoutSubviews {
