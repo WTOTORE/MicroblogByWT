@@ -40,7 +40,16 @@
 		06593AB11B85E79500F5B0E4 /* WTXMWindowTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 06593AB01B85E79500F5B0E4 /* WTXMWindowTool.m */; };
 		06593AB41B85F63A00F5B0E4 /* WTXMUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 06593AB31B85F63A00F5B0E4 /* WTXMUserModel.m */; };
 		066290D61A54F65C004B5339 /* UIBarButtonItem+WTXM.m in Sources */ = {isa = PBXBuildFile; fileRef = 066290D51A54F65C004B5339 /* UIBarButtonItem+WTXM.m */; };
+		06729AED1B89D96D0061A00F /* WTXMHTTPTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 06729AEC1B89D96D0061A00F /* WTXMHTTPTool.m */; };
+		06729AF01B89EB690061A00F /* WTXMStatusesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 06729AEF1B89EB690061A00F /* WTXMStatusesModel.m */; };
+		06729AF41B89EF480061A00F /* WTXMHomeHTTPRequestTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 06729AF31B89EF480061A00F /* WTXMHomeHTTPRequestTool.m */; };
 		069B607A1A5500C000A3518B /* UIView+WTXM.m in Sources */ = {isa = PBXBuildFile; fileRef = 069B60791A5500C000A3518B /* UIView+WTXM.m */; };
+		069BD92A1B8AD25D006B57FD /* WTXMCellImagesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 069BD9291B8AD25D006B57FD /* WTXMCellImagesView.m */; };
+		069BD92D1B8AEA34006B57FD /* WTXMStatusPhotosInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 069BD92C1B8AEA34006B57FD /* WTXMStatusPhotosInfoModel.m */; };
+		069BD9301B8AFA37006B57FD /* WTXMCellImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 069BD92F1B8AFA37006B57FD /* WTXMCellImageView.m */; };
+		069BD9391B8B1970006B57FD /* SDBrowserImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 069BD9331B8B1970006B57FD /* SDBrowserImageView.m */; };
+		069BD93A1B8B1970006B57FD /* SDPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 069BD9351B8B1970006B57FD /* SDPhotoBrowser.m */; };
+		069BD93B1B8B1970006B57FD /* SDWaitingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 069BD9381B8B1970006B57FD /* SDWaitingView.m */; };
 		069DDD9B1A55582E00163661 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 069DDD9A1A55582E00163661 /* main.m */; };
 		069DDDA41A55582E00163661 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 069DDDA21A55582E00163661 /* Main.storyboard */; };
 		069DDDA61A55582E00163661 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 069DDDA51A55582E00163661 /* Images.xcassets */; };
@@ -70,6 +79,7 @@
 		06A20FE51B8722EC00F51C95 /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A20FD31B8722EC00F51C95 /* UIImageView+HighlightedWebCache.m */; };
 		06A20FE61B8722EC00F51C95 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A20FD51B8722EC00F51C95 /* UIImageView+WebCache.m */; };
 		06A20FE71B8722EC00F51C95 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A20FD71B8722EC00F51C95 /* UIView+WebCacheOperation.m */; };
+		06A716A51B8837E1003EB2BA /* WTXMGeoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A716A41B8837E1003EB2BA /* WTXMGeoModel.m */; };
 		06E60BEA1B82F4E3009D1759 /* FIR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E60BE91B82F4E3009D1759 /* FIR.framework */; };
 		06E60BED1B82F5DA009D1759 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E60BEC1B82F5DA009D1759 /* SystemConfiguration.framework */; };
 		06E60BF01B8310C7009D1759 /* WTXMPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E60BEF1B8310C7009D1759 /* WTXMPopView.m */; };
@@ -158,8 +168,27 @@
 		06593AB31B85F63A00F5B0E4 /* WTXMUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTXMUserModel.m; sourceTree = "<group>"; };
 		066290D41A54F65C004B5339 /* UIBarButtonItem+WTXM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+WTXM.h"; sourceTree = "<group>"; };
 		066290D51A54F65C004B5339 /* UIBarButtonItem+WTXM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+WTXM.m"; sourceTree = "<group>"; };
+		06729AEB1B89D96D0061A00F /* WTXMHTTPTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTXMHTTPTool.h; sourceTree = "<group>"; };
+		06729AEC1B89D96D0061A00F /* WTXMHTTPTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTXMHTTPTool.m; sourceTree = "<group>"; };
+		06729AEE1B89EB690061A00F /* WTXMStatusesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTXMStatusesModel.h; sourceTree = "<group>"; };
+		06729AEF1B89EB690061A00F /* WTXMStatusesModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTXMStatusesModel.m; sourceTree = "<group>"; };
+		06729AF21B89EF480061A00F /* WTXMHomeHTTPRequestTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTXMHomeHTTPRequestTool.h; sourceTree = "<group>"; };
+		06729AF31B89EF480061A00F /* WTXMHomeHTTPRequestTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTXMHomeHTTPRequestTool.m; sourceTree = "<group>"; };
 		069B60781A5500C000A3518B /* UIView+WTXM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WTXM.h"; sourceTree = "<group>"; };
 		069B60791A5500C000A3518B /* UIView+WTXM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WTXM.m"; sourceTree = "<group>"; };
+		069BD9281B8AD25D006B57FD /* WTXMCellImagesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTXMCellImagesView.h; sourceTree = "<group>"; };
+		069BD9291B8AD25D006B57FD /* WTXMCellImagesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTXMCellImagesView.m; sourceTree = "<group>"; };
+		069BD92B1B8AEA34006B57FD /* WTXMStatusPhotosInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTXMStatusPhotosInfoModel.h; sourceTree = "<group>"; };
+		069BD92C1B8AEA34006B57FD /* WTXMStatusPhotosInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTXMStatusPhotosInfoModel.m; sourceTree = "<group>"; };
+		069BD92E1B8AFA37006B57FD /* WTXMCellImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTXMCellImageView.h; sourceTree = "<group>"; };
+		069BD92F1B8AFA37006B57FD /* WTXMCellImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTXMCellImageView.m; sourceTree = "<group>"; };
+		069BD9321B8B1970006B57FD /* SDBrowserImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDBrowserImageView.h; sourceTree = "<group>"; };
+		069BD9331B8B1970006B57FD /* SDBrowserImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDBrowserImageView.m; sourceTree = "<group>"; };
+		069BD9341B8B1970006B57FD /* SDPhotoBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPhotoBrowser.h; sourceTree = "<group>"; };
+		069BD9351B8B1970006B57FD /* SDPhotoBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDPhotoBrowser.m; sourceTree = "<group>"; };
+		069BD9361B8B1970006B57FD /* SDPhotoBrowserConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPhotoBrowserConfig.h; sourceTree = "<group>"; };
+		069BD9371B8B1970006B57FD /* SDWaitingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWaitingView.h; sourceTree = "<group>"; };
+		069BD9381B8B1970006B57FD /* SDWaitingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWaitingView.m; sourceTree = "<group>"; };
 		069DDD951A55582E00163661 /* WTXMMicroblog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WTXMMicroblog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		069DDD991A55582E00163661 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		069DDD9A1A55582E00163661 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -217,6 +246,8 @@
 		06A20FD51B8722EC00F51C95 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		06A20FD61B8722EC00F51C95 /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		06A20FD71B8722EC00F51C95 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
+		06A716A31B8837E1003EB2BA /* WTXMGeoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTXMGeoModel.h; sourceTree = "<group>"; };
+		06A716A41B8837E1003EB2BA /* WTXMGeoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTXMGeoModel.m; sourceTree = "<group>"; };
 		06E60BE91B82F4E3009D1759 /* FIR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FIR.framework; path = ../FIR.framework; sourceTree = "<group>"; };
 		06E60BEC1B82F5DA009D1759 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		06E60BEE1B8310C7009D1759 /* WTXMPopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTXMPopView.h; sourceTree = "<group>"; };
@@ -256,6 +287,8 @@
 			children = (
 				06044DA31A54E2E100424A7B /* WTXMSkinImage.h */,
 				06044DA41A54E2E100424A7B /* WTXMSkinImage.m */,
+				06729AEB1B89D96D0061A00F /* WTXMHTTPTool.h */,
+				06729AEC1B89D96D0061A00F /* WTXMHTTPTool.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -307,6 +340,7 @@
 		060960BA1B84A8A9004C57AC /* ThirdLibs */ = {
 			isa = PBXGroup;
 			children = (
+				069BD9311B8B1970006B57FD /* SDPhotoBrowser */,
 				06A20FB61B8722EC00F51C95 /* SDWebImage */,
 				06A20F9D1B86FC0100F51C95 /* ESSeparatorInset */,
 				06593A911B8593C500F5B0E4 /* MJExtension */,
@@ -518,6 +552,7 @@
 		063395031B7CBC4900898E73 /* Home(主页) */ = {
 			isa = PBXGroup;
 			children = (
+				06729AF11B89EF0C0061A00F /* Tools */,
 				063395041B7CBC4900898E73 /* Controllers */,
 				063395051B7CBC4900898E73 /* Models */,
 				063395061B7CBC4900898E73 /* Others */,
@@ -546,6 +581,12 @@
 				06A20FA21B86FFB000F51C95 /* WTXMUnreadCountModel.m */,
 				06A20FB01B87191000F51C95 /* WTXMStatusFrameModel.h */,
 				06A20FB11B87191000F51C95 /* WTXMStatusFrameModel.m */,
+				06A716A31B8837E1003EB2BA /* WTXMGeoModel.h */,
+				06A716A41B8837E1003EB2BA /* WTXMGeoModel.m */,
+				06729AEE1B89EB690061A00F /* WTXMStatusesModel.h */,
+				06729AEF1B89EB690061A00F /* WTXMStatusesModel.m */,
+				069BD92B1B8AEA34006B57FD /* WTXMStatusPhotosInfoModel.h */,
+				069BD92C1B8AEA34006B57FD /* WTXMStatusPhotosInfoModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -560,6 +601,7 @@
 		063395071B7CBC4900898E73 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				06A716A61B884BD3003EB2BA /* Cell */,
 				06044D9F1A54C83500424A7B /* WTXMHomeButton.h */,
 				06044DA01A54C83500424A7B /* WTXMHomeButton.m */,
 				06E60BEE1B8310C7009D1759 /* WTXMPopView.h */,
@@ -567,8 +609,6 @@
 				06A20F981B86DF4200F51C95 /* WTXMHomeFooterView.h */,
 				06A20F991B86DF4200F51C95 /* WTXMHomeFooterView.m */,
 				06A20F9B1B86E84400F51C95 /* WTXMHomeFooterView.xib */,
-				06A20FB31B871DE400F51C95 /* WTXMHomeTableViewCell.h */,
-				06A20FB41B871DE400F51C95 /* WTXMHomeTableViewCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -738,6 +778,29 @@
 			path = Tools;
 			sourceTree = "<group>";
 		};
+		06729AF11B89EF0C0061A00F /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				06729AF21B89EF480061A00F /* WTXMHomeHTTPRequestTool.h */,
+				06729AF31B89EF480061A00F /* WTXMHomeHTTPRequestTool.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		069BD9311B8B1970006B57FD /* SDPhotoBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				069BD9321B8B1970006B57FD /* SDBrowserImageView.h */,
+				069BD9331B8B1970006B57FD /* SDBrowserImageView.m */,
+				069BD9341B8B1970006B57FD /* SDPhotoBrowser.h */,
+				069BD9351B8B1970006B57FD /* SDPhotoBrowser.m */,
+				069BD9361B8B1970006B57FD /* SDPhotoBrowserConfig.h */,
+				069BD9371B8B1970006B57FD /* SDWaitingView.h */,
+				069BD9381B8B1970006B57FD /* SDWaitingView.m */,
+			);
+			path = SDPhotoBrowser;
+			sourceTree = "<group>";
+		};
 		069DDD8C1A55582E00163661 = {
 			isa = PBXGroup;
 			children = (
@@ -852,6 +915,19 @@
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
+		06A716A61B884BD3003EB2BA /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				06A20FB31B871DE400F51C95 /* WTXMHomeTableViewCell.h */,
+				06A20FB41B871DE400F51C95 /* WTXMHomeTableViewCell.m */,
+				069BD9281B8AD25D006B57FD /* WTXMCellImagesView.h */,
+				069BD9291B8AD25D006B57FD /* WTXMCellImagesView.m */,
+				069BD92E1B8AFA37006B57FD /* WTXMCellImageView.h */,
+				069BD92F1B8AFA37006B57FD /* WTXMCellImageView.m */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
 		06E60BEB1B82F593009D1759 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
@@ -964,9 +1040,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				069BD92D1B8AEA34006B57FD /* WTXMStatusPhotosInfoModel.m in Sources */,
 				06A20FA01B86FC0100F51C95 /* UIViewController+ESSeparatorInset.m in Sources */,
 				06593AA61B8593C500F5B0E4 /* NSObject+MJIvar.m in Sources */,
 				06593AB11B85E79500F5B0E4 /* WTXMWindowTool.m in Sources */,
+				069BD9391B8B1970006B57FD /* SDBrowserImageView.m in Sources */,
 				06E60BF31B8314B2009D1759 /* WTXMGuideController.m in Sources */,
 				060960DA1B84AC0D004C57AC /* NSArray+Log.m in Sources */,
 				06A20FB21B87191000F51C95 /* WTXMStatusFrameModel.m in Sources */,
@@ -982,16 +1060,22 @@
 				06A20F971A54CD2A00F51C95 /* WTXMBlogModel.m in Sources */,
 				060960D31B84A8EA004C57AC /* AFSecurityPolicy.m in Sources */,
 				060960D01B84A8EA004C57AC /* AFHTTPRequestOperationManager.m in Sources */,
+				069BD93A1B8B1970006B57FD /* SDPhotoBrowser.m in Sources */,
+				06729AF41B89EF480061A00F /* WTXMHomeHTTPRequestTool.m in Sources */,
 				06A20FE51B8722EC00F51C95 /* UIImageView+HighlightedWebCache.m in Sources */,
 				06A20FAF1B8715E800F51C95 /* UITabBarItem+BadgeValueImage.m in Sources */,
+				06729AF01B89EB690061A00F /* WTXMStatusesModel.m in Sources */,
 				060960CF1B84A8EA004C57AC /* AFHTTPRequestOperation.m in Sources */,
+				069BD92A1B8AD25D006B57FD /* WTXMCellImagesView.m in Sources */,
 				06A20F9A1B86DF4200F51C95 /* WTXMHomeFooterView.m in Sources */,
 				06044DA11A54C83500424A7B /* WTXMHomeButton.m in Sources */,
+				06729AED1B89D96D0061A00F /* WTXMHTTPTool.m in Sources */,
 				06A20FDD1B8722EC00F51C95 /* SDWebImageDownloader.m in Sources */,
 				06A20FE11B8722EC00F51C95 /* UIButton+WebCache.m in Sources */,
 				06593AA31B8593C500F5B0E4 /* MJIvar.m in Sources */,
 				06E60BF01B8310C7009D1759 /* WTXMPopView.m in Sources */,
 				06044DA51A54E2E100424A7B /* WTXMSkinImage.m in Sources */,
+				069BD9301B8AFA37006B57FD /* WTXMCellImageView.m in Sources */,
 				0633951F1B7CBDA100898E73 /* WTXMBasicNavigationController.m in Sources */,
 				063395191B7CBC4900898E73 /* AppDelegate.m in Sources */,
 				063395221B7CBEDB00898E73 /* WTXMTabBar.m in Sources */,
@@ -1003,10 +1087,12 @@
 				0633951C1B7CBD8100898E73 /* WTXMMainTabBarController.m in Sources */,
 				066290D61A54F65C004B5339 /* UIBarButtonItem+WTXM.m in Sources */,
 				060960D41B84A8EA004C57AC /* AFURLConnectionOperation.m in Sources */,
+				069BD93B1B8B1970006B57FD /* SDWaitingView.m in Sources */,
 				060960D51B84A8EA004C57AC /* AFURLRequestSerialization.m in Sources */,
 				060960D71B84A8EA004C57AC /* AFURLSessionManager.m in Sources */,
 				060960D61B84A8EA004C57AC /* AFURLResponseSerialization.m in Sources */,
 				06A20FE71B8722EC00F51C95 /* UIView+WebCacheOperation.m in Sources */,
+				06A716A51B8837E1003EB2BA /* WTXMGeoModel.m in Sources */,
 				06A20FDA1B8722EC00F51C95 /* SDImageCache.m in Sources */,
 				06A20FDF1B8722EC00F51C95 /* SDWebImageManager.m in Sources */,
 				06F5DAE61B7E12DC000E0391 /* WTXMHomeTableViewController.m in Sources */,

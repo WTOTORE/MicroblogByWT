@@ -14,11 +14,14 @@
 #import "WTXMUnreadCountModel.h"
 #import "WTXMHomeTableViewCell.h"
 #import "WTXMStatusFrameModel.h"
+#import "WTXMStatusesModel.h"
+#import "WTXMHomeHTTPRequestTool.h"
 
 @interface WTXMHomeTableViewController ()
 @property (nonatomic,strong) WTXMHomeButton *homeBtn;
 @property (nonatomic,strong) WTXMUserModel *user;
 @property (nonatomic,strong) NSMutableArray *statusFrames;
+@property (nonatomic,weak) UIRefreshControl *refresh;
 @end
 
 @implementation WTXMHomeTableViewController
@@ -46,25 +49,12 @@
 }
 - (WTXMUserModel *)user {
     if (!_user) {
-        WTXMAccountModel *account=[WTXMAccountTool account];
-        AFHTTPRequestOperationManager *manager=[AFHTTPRequestOperationManager manager];
-        NSString *urlStr=@"https://api.weibo.com/2/users/show.json";
-        NSMutableDictionary *parameters=[NSMutableDictionary dictionary];
-        parameters[@"access_token"]=account.access_token;
-        parameters[@"uid"]=account.uid;
-        [manager GET:urlStr parameters:parameters success:^(AFHTTPRequestOperation * operation, NSDictionary *response) {
+        [WTXMHomeHTTPRequestTool getUserInfoSuccess:^(WTXMUserModel *user) {
+            _user=user;
+        } Failure:^(NSError *error) {
             
-            _user=[[WTXMUserModel alloc] init];
-            [_user setKeyValues:response];
-            [[NSUserDefaults standardUserDefaults] setObject:_user.screen_name forKey:@"_user.name"];
-            [[NSUserDefaults standardUserDefaults] synchronize];
-
-            
-        } failure:^(AFHTTPRequestOperation * operation, NSError * error) {
-            NSLog(@"error:%@",error);
         }];
-
-           }
+         }
     return _user;
 }
 
@@ -83,7 +73,7 @@
     NSTimer *timer=[NSTimer timerWithTimeInterval:300 target:self selector:@selector(getUnLoadBlogsCount) userInfo:nil repeats:YES];
     [timer fire];
     [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
-    
+  
    }
 /**
  *  设置系统刷新控件
@@ -93,6 +83,7 @@
     [self.tableView addSubview:refresh];
     [refresh addTarget:self action:@selector(loadNewBlogs:) forControlEvents:UIControlEventValueChanged];
     [refresh beginRefreshing];
+    self.refresh=refresh;
     [self loadNewBlogs:refresh];
     WTXMHomeFooterView *footerView=[WTXMHomeFooterView footerView];
     self.tableView.tableFooterView=footerView;
@@ -105,81 +96,29 @@
  *
  */
 - (void) loadNewBlogs:(UIRefreshControl *)refresh {
-    AFHTTPRequestOperationManager *manager=[AFHTTPRequestOperationManager manager];
-    NSString *urlStr=@"https://api.weibo.com/2/statuses/home_timeline.json";
-    WTXMAccountModel *account=[WTXMAccountTool account];
-    NSMutableDictionary *parameters=[NSMutableDictionary dictionary];
-    parameters[@"access_token"]=account.access_token;
-    parameters[@"count"]=@20;//默认为20
-    parameters[@"since_id"]=@([[[self.statusFrames firstObject] blog] id]);//此处是 since_id 和 statuses 字典里面的 id 作比较,而不是 since_id
-[manager GET:urlStr parameters:parameters success:^ void(AFHTTPRequestOperation * operation, id response) {
-    [refresh endRefreshing];
-    NSArray *dictArr=response[@"statuses"];
-    NSArray *blogArr=[WTXMBlogModel objectArrayWithKeyValuesArray:dictArr];
-    NSMutableArray *tempArr=[NSMutableArray array];
-    for (WTXMBlogModel *blog in blogArr) {
-        WTXMStatusFrameModel *statusFrame=[[WTXMStatusFrameModel alloc] init];
-        statusFrame.blog=blog;
-        [tempArr addObject:statusFrame];
-    }
-    blogArr=tempArr;
-    NSIndexSet *indexSet=[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, blogArr.count)];
-    [self.statusFrames insertObjects:blogArr atIndexes:indexSet];
-    [self showRefreshCountLable:blogArr.count];
-    [self.tableView reloadData];
-    [self getUnLoadBlogsCount];
-} failure:^ void(AFHTTPRequestOperation * operation, NSError * error) {
-    
-}];
+    [WTXMHomeHTTPRequestTool loadNewStatusesWithModelArray:self.statusFrames RefreshControl:refresh Success:^(id array) {
+        NSIndexSet *indexSet=[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, [array count])];
+        [self.statusFrames insertObjects:array atIndexes:indexSet];
+        [self showRefreshCountLable:[array count]];
+        [self.tableView reloadData];
+        [self getUnLoadBlogsCount];
+    } Failure:^(NSError *error) {
+        
+    }];
 }
 /**
  *  获取以前的微博
  */
 - (void)loadOldBlogs {
-    AFHTTPRequestOperationManager *manager=[AFHTTPRequestOperationManager manager];
-    NSString *urlStr=@"https://api.weibo.com/2/statuses/home_timeline.json";
-    WTXMAccountModel *account=[WTXMAccountTool account];
-    NSMutableDictionary *parameters=[NSMutableDictionary dictionary];
-    parameters[@"access_token"]=account.access_token;
-    parameters[@"count"]=@20;//默认为20
-    parameters[@"max_id"]=@([[[self.statusFrames firstObject] blog] id]-1);//此处是 since_id 和 statuses 字典里面的 id 作比较,而不是 since_id
-    [manager GET:urlStr parameters:parameters success:^ void(AFHTTPRequestOperation * operation, id response) {
-        NSArray *dictArr=response[@"statuses"];
-        NSArray *blogArr=[WTXMBlogModel objectArrayWithKeyValuesArray:dictArr];
-        NSMutableArray *tempArr=[NSMutableArray array];
-        for (WTXMBlogModel *blog in blogArr) {
-            WTXMStatusFrameModel *statusFrame=[[WTXMStatusFrameModel alloc] init];
-            statusFrame.blog=blog;
-            [tempArr addObject:statusFrame];
-        }
-        blogArr=tempArr;
-        [self.statusFrames addObjectsFromArray:blogArr];
+    [WTXMHomeHTTPRequestTool loadOldStatusesWithModelArray:self.statusFrames RefreshControl:_refresh Success:^(id array) {
         [self.tableView reloadData];
         self.tableView.tableFooterView.hidden=YES;
-    } failure:^ void(AFHTTPRequestOperation * operation, NSError * error) {
+    } Failure:^(NSError *error) {
         
     }];
-
 }
 - (void)getUnLoadBlogsCount {
-    AFHTTPRequestOperationManager *manager=[AFHTTPRequestOperationManager manager];
-    NSString *urlStr=@"https://rm.api.weibo.com/2/remind/unread_count.json";
-    WTXMAccountModel *account=[WTXMAccountTool account];
-    NSMutableDictionary *parameters=[NSMutableDictionary dictionary];
-    /**
-     *
-     必选	类型及范围	说明
-     source	false	string	采用OAuth授权方式不需要此参数，其他授权方式为必填参数，数值为应用的AppKey。
-     access_token	false	string	采用OAuth授权方式为必填参数，其他授权方式不需要此参数，OAuth授权后获得。
-     uid	true	int64	需要获取消息未读数的用户UID，必须是当前登录用户。
-
-     */
-    parameters[@"access_token"]=account.access_token;
-    parameters[@"uid"]=account.uid;
-  
-    [manager GET:urlStr parameters:parameters success:^ void(AFHTTPRequestOperation * operation, id response) {
-        WTXMUnreadCountModel *unreadCount=[[WTXMUnreadCountModel alloc] init];
-        [unreadCount setKeyValues:response];
+    [WTXMHomeHTTPRequestTool getUnreadStatusCountSuccess:^(WTXMUnreadCountModel *unreadCount) {
         if (unreadCount.status) {
             self.tabBarItem.badgeValue=[NSString stringWithFormat:@"%d",unreadCount.status];
             [UIApplication sharedApplication].applicationIconBadgeNumber=unreadCount.status;
@@ -187,11 +126,9 @@
             self.tabBarItem.badgeValue=nil;
             [UIApplication sharedApplication].applicationIconBadgeNumber=0;
         }
-        
-    } failure:^ void(AFHTTPRequestOperation * operation, NSError * error) {
+    } Failure:^(NSError *error) {
         
     }];
-
 }
 /**
  *  加载了多少条微博的提示
@@ -226,7 +163,7 @@
     [super didReceiveMemoryWarning];
 }
 
-#pragma mark - Table view data source
+#pragma mark - UITableViewDataSource
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -248,7 +185,7 @@
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
      WTXMStatusFrameModel *statusFrame=self.statusFrames[indexPath.row];
-    return statusFrame.originateViewHeight;
+    return statusFrame.cellHeight;
 }
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     if (self.statusFrames.count==0) {
@@ -264,4 +201,5 @@
         [self loadOldBlogs];
     }
 }
+
 @end

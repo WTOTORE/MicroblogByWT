@@ -31,11 +31,11 @@
         Method swizzledMethod = class_getInstanceMethod(class, swizzledSelector);
         
         //先向类身上添加方法
-        BOOL result = class_addMethod(class, originalSelector, method_getImplementation(swizzledMethod), method_getTypeEncoding(swizzledMethod));
+        BOOL result = class_addMethod(class, swizzledSelector, method_getImplementation(swizzledMethod), method_getTypeEncoding(swizzledMethod));
         
         if (result) {
             //如果添加成功就替换方法实现
-            class_replaceMethod(class, swizzledSelector, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod));
+            class_replaceMethod(class, originalSelector, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod));
             
         }else{
             //没有添加成功,直接交换方法实现

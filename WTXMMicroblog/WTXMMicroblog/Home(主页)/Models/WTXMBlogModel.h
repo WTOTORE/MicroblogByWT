@@ -185,12 +185,32 @@
 	since_id = 3878231042639703;
  }
  */
-
 #import <Foundation/Foundation.h>
-@class WTXMUserModel;
+
+
+@class WTXMUserModel,WTXMGeoModel;
 @interface WTXMBlogModel : NSObject
 @property (nonatomic,copy) NSString *text;
 @property (nonatomic,assign) long long id;
 @property (nonatomic,copy) NSString *created_at;
+
+@property (nonatomic,copy) NSString *source;
+
 @property (nonatomic,strong) WTXMUserModel *user;
+@property (nonatomic,strong) WTXMGeoModel *geo;
+
+
+
+@property (nonatomic,strong) WTXMBlogModel *retweeted_status;
+//reposts_count	int	转发数
+//comments_count	int	评论数
+//attitudes_count	int	表态数
+@property (nonatomic,assign) int reposts_count;
+@property (nonatomic,copy) NSString *retweetCount;
+@property (nonatomic,assign) int comments_count;
+@property (nonatomic,copy) NSString *commentCount;
+@property (nonatomic,assign) int attitudes_count;
+@property (nonatomic,copy) NSString *unlikeCount;
+@property (nonatomic,strong) NSArray *pic_urls;
 @end
+

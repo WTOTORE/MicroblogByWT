@@ -66,4 +66,14 @@
 @interface WTXMUserModel : NSObject
 @property (nonatomic,copy) NSString *screen_name;
 @property (nonatomic,copy) NSString *profile_image_url;
+//"mbtype": 12,
+//"mbrank": 5,
+//会员类型,如果当前这个值大于第于2的话,就代表是会员
+@property (nonatomic, assign) NSInteger mbtype;
+
+//会员等级:如果会员类型大于等于2的话,才有用
+@property (nonatomic, assign) NSInteger mbrank;
+
+@property (nonatomic, assign,getter=isVip) BOOL vip;
+
 @end

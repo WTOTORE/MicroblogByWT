@@ -19,8 +19,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
      [FIR handleCrashWithKey:@"6d4c29d371d969bb33f22735ba8967b2"];
-    UIUserNotificationSettings *settings=[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeBadge categories:nil];
-    [application registerUserNotificationSettings:settings];
+    if ([[UIDevice currentDevice].systemVersion doubleValue]>=8.0) {
+        UIUserNotificationSettings *settings=[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeBadge categories:nil];
+        [application registerUserNotificationSettings:settings];
+    }
+   
     
     self.window=[[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     NSString *version = [[NSUserDefaults standardUserDefaults] valueForKey:kVersion];

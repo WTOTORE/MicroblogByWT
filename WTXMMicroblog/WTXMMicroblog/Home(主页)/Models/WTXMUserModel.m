@@ -9,5 +9,8 @@
 #import "WTXMUserModel.h"
 
 @implementation WTXMUserModel
-
+- (void)setMbtype:(NSInteger)mbtype{
+    _mbtype = mbtype;
+    self.vip = mbtype>=2;
+}
 @end
