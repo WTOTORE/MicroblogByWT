@@ -33,6 +33,7 @@
 +(instancetype)itemWithTitle:(NSString *)title target:(id)target action:(SEL)action {
     UIButton *btn=[[UIButton alloc] init];
     [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [btn setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
     [btn setTitleColor:[UIColor orangeColor] forState:UIControlStateHighlighted];
     [btn setTitle:title forState:UIControlStateNormal];
     [btn sizeToFit];

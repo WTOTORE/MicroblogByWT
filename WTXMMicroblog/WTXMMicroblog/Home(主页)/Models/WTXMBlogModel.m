@@ -8,47 +8,12 @@
 
 #import "WTXMBlogModel.h"
 #import "WTXMStatusPhotosInfoModel.h"
-#define CURRENT_DATE [NSDate date]
+
 @implementation WTXMBlogModel
 
 - (NSString *)created_at {
-  _created_at = @"Mon Aug 24 18:02:03 +0800 2014";
-    NSDateFormatter *createdFormatter=[[NSDateFormatter alloc] init];
-//    formatter.dateFormat = @"EEE MMM dd HH:mm:ss z yyyy";
-//    //指定格式化的一个附加
-//    formatter.locale = [NSLocale localeWithLocaleIdentifier:@"en_US"];
-    createdFormatter.dateFormat=@"EEE MMM dd HH:mm:ss z yyyy";
-    createdFormatter.locale=[NSLocale localeWithLocaleIdentifier:@"zh"];
-    NSDate *createdDate=[createdFormatter dateFromString:_created_at];
-    if ([self isThisYear:createdDate]) {
-        
-    }else {
-        createdFormatter.dateFormat=@"yyyy-MM-dd HH:mm";
-        return [createdFormatter stringFromDate:createdDate];
-    }
-    
-    
-    
-    
-   
-    
-    return _created_at;
+    return [WTXMDateTool formatDateWithDateString:_created_at];
 }
-- (BOOL) isThisYear:(NSDate *)createdDate {
-    NSDateFormatter *formater=[[NSDateFormatter alloc] init];
-    formater.dateFormat=@"yyyy";
-    NSString *created=[formater stringFromDate:createdDate];
-    NSString *current=[formater stringFromDate:CURRENT_DATE];
-    return [created isEqualToString:current];
-}
-
-
-
-
-
-
-
-
 
 
 - (void)setSource:(NSString *)source {

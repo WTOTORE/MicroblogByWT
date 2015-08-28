@@ -7,6 +7,7 @@
 //
 
 #ifndef WTXMMicroblog_WTXMMicroblog_pch
+#ifdef __OBJC__
 #define WTXMMicroblog_WTXMMicroblog_pch
 #define kVersion @"Version"
 #import "WTXMSkinImage.h"
@@ -22,4 +23,8 @@
 #import "UIViewController+ESSeparatorInset.h"
 #import "UIImageView+WebCache.h"
 #import "WTXMHTTPTool.h"
+#import "WTXMDateTool.h"
+#import "UIImage+ImageEffects.h"
+#import "POP.h"
+#endif
 #endif

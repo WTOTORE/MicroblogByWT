@@ -149,8 +149,8 @@
 
 - (void)setStatusFrame:(WTXMStatusFrameModel *)statusFrame {
     _statusFrame=statusFrame;
-    [self setOriginalViewData:statusFrame];
     [self setOriginalViewFrames:statusFrame];
+    [self setOriginalViewData:statusFrame];
     
     [self setRetweetViewData:statusFrame];
     [self setRetweetViewFrames:statusFrame];
@@ -172,7 +172,11 @@
         self.nameLabel.textColor = [UIColor blackColor];
     }
     self.timeLabel.text=blog.created_at;
+    NSDictionary *attrs=@{NSFontAttributeName:[UIFont systemFontOfSize:TIME_FONT]};
+    CGSize textSize = [blog.created_at sizeWithAttributes:attrs];
+    self.timeLabel.wid=textSize.width;
     self.sourceLabel.text=blog.source;
+    self.sourceLabel.x=CGRectGetMaxX(self.timeLabel.frame)+MARGIN;
     self.originateTextLabel.text=blog.text;
     if (blog.pic_urls) {
         self.originateImagesView.hidden=NO;

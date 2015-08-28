@@ -14,6 +14,7 @@
 #import "WTXMProfileTableViewController.h"
 #import "WTXMBasicNavigationController.h"
 #import "UITabBarItem+BadgeValueImage.h"
+#import "WTXMComposeView.h"
 
 
 @interface WTXMMainTabBarController ()<WTXMTabBarDelegate>
@@ -58,7 +59,9 @@
     // Dispose of any resources that can be recreated.
 }
 - (void)tabBar:(WTXMTabBar *)tabBar didSelectPlusButton:(UIButton *)button {
-    
+    WTXMComposeView *composeView=[[WTXMComposeView alloc] initWithFrame:self.view.bounds];
+    composeView.target=self;
+    [self.view addSubview:composeView];
 }
 /*
 #pragma mark - Navigation
