@@ -63,6 +63,8 @@
 		06593AAE1B85957E00F5B0E4 /* WTXMAccountModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 06593AAD1B85957E00F5B0E4 /* WTXMAccountModel.m */; };
 		06593AB11B85E79500F5B0E4 /* WTXMWindowTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 06593AB01B85E79500F5B0E4 /* WTXMWindowTool.m */; };
 		06593AB41B85F63A00F5B0E4 /* WTXMUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 06593AB31B85F63A00F5B0E4 /* WTXMUserModel.m */; };
+		0661F0D31B903E8400C73EB3 /* WTXMStatusPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 0661F0D21B903E8400C73EB3 /* WTXMStatusPhoto.m */; };
+		0661F0D61B903EA300C73EB3 /* WTXMStatusImagesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0661F0D51B903EA300C73EB3 /* WTXMStatusImagesView.m */; };
 		066290D61A54F65C004B5339 /* UIBarButtonItem+WTXM.m in Sources */ = {isa = PBXBuildFile; fileRef = 066290D51A54F65C004B5339 /* UIBarButtonItem+WTXM.m */; };
 		06729AED1B89D96D0061A00F /* WTXMHTTPTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 06729AEC1B89D96D0061A00F /* WTXMHTTPTool.m */; };
 		06729AF01B89EB690061A00F /* WTXMStatusesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 06729AEF1B89EB690061A00F /* WTXMStatusesModel.m */; };
@@ -255,6 +257,10 @@
 		06593AB01B85E79500F5B0E4 /* WTXMWindowTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTXMWindowTool.m; sourceTree = "<group>"; };
 		06593AB21B85F63A00F5B0E4 /* WTXMUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTXMUserModel.h; sourceTree = "<group>"; };
 		06593AB31B85F63A00F5B0E4 /* WTXMUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTXMUserModel.m; sourceTree = "<group>"; };
+		0661F0D11B903E8400C73EB3 /* WTXMStatusPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTXMStatusPhoto.h; sourceTree = "<group>"; };
+		0661F0D21B903E8400C73EB3 /* WTXMStatusPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTXMStatusPhoto.m; sourceTree = "<group>"; };
+		0661F0D41B903EA300C73EB3 /* WTXMStatusImagesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTXMStatusImagesView.h; sourceTree = "<group>"; };
+		0661F0D51B903EA300C73EB3 /* WTXMStatusImagesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTXMStatusImagesView.m; sourceTree = "<group>"; };
 		066290D41A54F65C004B5339 /* UIBarButtonItem+WTXM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+WTXM.h"; sourceTree = "<group>"; };
 		066290D51A54F65C004B5339 /* UIBarButtonItem+WTXM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+WTXM.m"; sourceTree = "<group>"; };
 		06729AEB1B89D96D0061A00F /* WTXMHTTPTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTXMHTTPTool.h; sourceTree = "<group>"; };
@@ -641,6 +647,10 @@
 				061062211B8DD60100CF9091 /* WTXMComposeButton.m */,
 				06A0064C1A54F54B009B1230 /* WTXMStatusTextView.h */,
 				06A0064D1A54F54B009B1230 /* WTXMStatusTextView.m */,
+				0661F0D11B903E8400C73EB3 /* WTXMStatusPhoto.h */,
+				0661F0D21B903E8400C73EB3 /* WTXMStatusPhoto.m */,
+				0661F0D41B903EA300C73EB3 /* WTXMStatusImagesView.h */,
+				0661F0D51B903EA300C73EB3 /* WTXMStatusImagesView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1233,6 +1243,7 @@
 				06593AB11B85E79500F5B0E4 /* WTXMWindowTool.m in Sources */,
 				069BD9391B8B1970006B57FD /* SDBrowserImageView.m in Sources */,
 				06E60BF31B8314B2009D1759 /* WTXMGuideController.m in Sources */,
+				0661F0D31B903E8400C73EB3 /* WTXMStatusPhoto.m in Sources */,
 				060960DA1B84AC0D004C57AC /* NSArray+Log.m in Sources */,
 				06A20FB21B87191000F51C95 /* WTXMStatusFrameModel.m in Sources */,
 				06EF842D1B8C7AB200A11DA7 /* WTXMDateTool.m in Sources */,
@@ -1256,6 +1267,7 @@
 				060960D01B84A8EA004C57AC /* AFHTTPRequestOperationManager.m in Sources */,
 				061062101B8DD55600CF9091 /* POPAnimationEvent.mm in Sources */,
 				069BD93A1B8B1970006B57FD /* SDPhotoBrowser.m in Sources */,
+				0661F0D61B903EA300C73EB3 /* WTXMStatusImagesView.m in Sources */,
 				06729AF41B89EF480061A00F /* WTXMHomeHTTPRequestTool.m in Sources */,
 				06A20FE51B8722EC00F51C95 /* UIImageView+HighlightedWebCache.m in Sources */,
 				06A20FAF1B8715E800F51C95 /* UITabBarItem+BadgeValueImage.m in Sources */,

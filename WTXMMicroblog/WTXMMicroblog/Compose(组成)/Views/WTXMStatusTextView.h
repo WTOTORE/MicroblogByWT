@@ -14,6 +14,8 @@ typedef NS_ENUM(NSUInteger, ToolButtonRelated) {
     ToolButtonRelatedTrend,
     ToolButtonRelatedEmotion
 };
+@class WTXMStatusImagesView;
 @interface WTXMStatusTextView : UITextView
-
+@property (nonatomic,copy) void (^toolButtonClick) (ToolButtonRelated);
+@property (nonatomic,strong) WTXMStatusImagesView *imagesView;
 @end

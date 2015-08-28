@@ -7,13 +7,35 @@
 //
 
 #import "WTXMStatusTextView.h"
+#import "WTXMStatusPhoto.h"
+#import "WTXMStatusImagesView.h"
 @interface WTXMStatusTextView ()
 @property (nonatomic,weak) UITextField *placeHolder;
 @property (nonatomic,strong) NSMutableArray *toolButtons;
 @property (nonatomic,strong) UIView *toolBarView;
+@property (nonatomic,strong) NSMutableArray *imagesArray;
+
 @end
 
 @implementation WTXMStatusTextView
+- (UIView *)imagesView {
+    if (!_imagesView) {
+        _imagesView = [WTXMStatusImagesView new];
+        
+        _imagesView.y = 100;
+        _imagesView.wid = self.wid;
+        [self addSubview:_imagesView];
+    }
+    return _imagesView;
+}
+- (NSMutableArray *)imagesArray {
+    if (!_imagesArray) {
+        _imagesArray = [NSMutableArray array];
+    }
+    return _imagesArray;
+}
+
+
 - (UIView *)toolBarView {
     if (!_toolBarView) {
         _toolBarView = [UIView new];
@@ -37,6 +59,8 @@
     }
     return _toolButtons;
 }
+
+
 
 - (UIButton *) addButtonInToolButtonsWithImageName:(NSString *)norName SelectedName:(NSString *)selName {
     UIButton *button = [UIButton new];
@@ -86,41 +110,7 @@
 }
 
 - (void) toolButtonClicked:(UIButton *)button {
-    switch (button.tag) {
-        case ToolButtonRelatedCamera:
-            
-            break;
-        case ToolButtonRelatedPhotos:
-            
-            break;
-        case ToolButtonRelatedUsers:
-            
-            break;
-        case ToolButtonRelatedTrend:
-            
-            break;
-        case ToolButtonRelatedEmotion:
-            
-            break;
-            
-        default:
-            break;
-    }
-}
-
-- (void) makeAPhoto {
-    
-}
-
-- (void) chooseAPhoto {
-    
-}
-
-- (void) relateFriend {
-    
-}
-- (void) trend {
-    
+    self.toolButtonClick(button.tag);
 }
 
 - (void) switchKeyboard:(UIButton *)button {

@@ -8,9 +8,10 @@
 
 #import "WTXMComposeViewController.h"
 #import "WTXMStatusTextView.h"
+#import "WTXMStatusImagesView.h"
 
-@interface WTXMComposeViewController ()<UITextViewDelegate>
-@property (nonatomic,weak) UITextView *textView;
+@interface WTXMComposeViewController ()<UITextViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
+@property (nonatomic,weak) WTXMStatusTextView *textView;
 @property (nonatomic,weak) UITextField *placeHolder;
 @end
 
@@ -28,6 +29,10 @@
    
     WTXMStatusTextView *textView=[[WTXMStatusTextView alloc] initWithFrame:self.view.bounds];
     textView.delegate=self;
+    __weak WTXMComposeViewController *myself=self;
+    textView.toolButtonClick = ^(ToolButtonRelated related){
+        [myself toolButtonClicked:related];
+    };
     [self.view addSubview:textView];
     self.textView = textView;
 }
@@ -58,6 +63,61 @@
     self.navigationItem.rightBarButtonItem.enabled=NO;
    
 }
+#pragma mark -工具栏按钮点击监听
+
+- (void) toolButtonClicked:(ToolButtonRelated)related {
+    switch (related) {
+        case ToolButtonRelatedCamera:
+            if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+                
+            }
+            break;
+        case ToolButtonRelatedPhotos:
+            
+            [self chooseAPhoto:UIImagePickerControllerSourceTypeSavedPhotosAlbum];
+            
+            break;
+        case ToolButtonRelatedUsers:
+            
+            break;
+        case ToolButtonRelatedTrend:
+            
+            break;
+        case ToolButtonRelatedEmotion:
+            
+            break;
+            
+        default:
+            break;
+    }
+}
+- (void) chooseAPhoto:(UIImagePickerControllerSourceType)type {
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.sourceType=type;
+    picker.delegate = self;
+    
+    [self presentViewController:picker animated:YES completion:nil];
+    
+}
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    
+    UIImage *img=info[UIImagePickerControllerOriginalImage];
+    [self.textView.imagesView addImage:img];
+    [picker dismissViewControllerAnimated:YES completion:nil];
+    
+}
+    
+
+
+
+
+
+
+
+
+
+
+
 
 - (void)cancel {
     [self dismissViewControllerAnimated:YES completion:nil];
