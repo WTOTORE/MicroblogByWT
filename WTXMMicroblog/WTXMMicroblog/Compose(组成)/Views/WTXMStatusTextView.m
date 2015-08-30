@@ -9,15 +9,26 @@
 #import "WTXMStatusTextView.h"
 #import "WTXMStatusPhoto.h"
 #import "WTXMStatusImagesView.h"
+#import "WTXMEmotionView.h"
 @interface WTXMStatusTextView ()
 @property (nonatomic,weak) UITextField *placeHolder;
 @property (nonatomic,strong) NSMutableArray *toolButtons;
 @property (nonatomic,strong) UIView *toolBarView;
 @property (nonatomic,strong) NSMutableArray *imagesArray;
-
+@property (nonatomic,strong) WTXMEmotionView *emotionView;
+@property (nonatomic,assign,getter=isKeyboard) BOOL keyboard;
 @end
 
 @implementation WTXMStatusTextView
+- (WTXMEmotionView *)emotionView {
+    if (!_emotionView) {
+        CGFloat emotionHeight = 200;
+        _emotionView= [[WTXMEmotionView alloc] initWithFrame:CGRectMake(0, self.hei-emotionHeight-64, self.wid, emotionHeight)];
+        [self addSubview:_emotionView];
+    }
+    return _emotionView;
+}
+
 - (UIView *)imagesView {
     if (!_imagesView) {
         _imagesView = [WTXMStatusImagesView new];
@@ -51,25 +62,24 @@
 - (NSMutableArray *)toolButtons {
     if (!_toolButtons) {
         _toolButtons = [NSMutableArray array];
-        [_toolButtons addObject:[self addButtonInToolButtonsWithImageName:@"camerabutton_background" SelectedName:nil]];
-        [_toolButtons addObject:[self addButtonInToolButtonsWithImageName:@"toolbar_picture" SelectedName:nil]];
-        [_toolButtons addObject:[self addButtonInToolButtonsWithImageName:@"mentionbutton_background" SelectedName:nil]];
-        [_toolButtons addObject:[self addButtonInToolButtonsWithImageName:@"trendbutton_background" SelectedName:nil]];
-        [_toolButtons addObject:[self addButtonInToolButtonsWithImageName:@"emoticonbutton_background" SelectedName:@"keyboardbutton_background"]];
+        [_toolButtons addObject:[self addButtonInToolButtonsWithImageName:@"camerabutton_background"]];
+        [_toolButtons addObject:[self addButtonInToolButtonsWithImageName:@"toolbar_picture"]];
+        [_toolButtons addObject:[self addButtonInToolButtonsWithImageName:@"mentionbutton_background"]];
+        [_toolButtons addObject:[self addButtonInToolButtonsWithImageName:@"trendbutton_background"]];
+        [_toolButtons addObject:[self addButtonInToolButtonsWithImageName:@"emoticonbutton_background"]];
     }
     return _toolButtons;
 }
 
 
 
-- (UIButton *) addButtonInToolButtonsWithImageName:(NSString *)norName SelectedName:(NSString *)selName {
+- (UIButton *) addButtonInToolButtonsWithImageName:(NSString *)norName {
     UIButton *button = [UIButton new];
     NSString *nor = [NSString stringWithFormat:@"compose_%@",norName];
     NSString *high = [NSString stringWithFormat:@"compose_%@_highlighted",norName];
-    NSString *sel = [NSString stringWithFormat:@"compose_%@_",selName];
     [button setImage:[UIImage imageNamed:nor] forState:UIControlStateNormal];
     [button setImage:[UIImage imageNamed:high] forState:UIControlStateHighlighted];
-    [button setImage:[UIImage imageNamed:sel] forState:UIControlStateSelected];
+    
     return button;
 }
 
@@ -80,6 +90,7 @@
         [self addTextToolBar];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hidePlaceHolder:) name:UITextViewTextDidChangeNotification object:nil];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardFrameChanged:) name:UIKeyboardWillChangeFrameNotification object:nil];
+        self.keyboard = YES;
     }
     return self;
 }
@@ -91,7 +102,8 @@
     placeHolder.font=[UIFont systemFontOfSize:16];
     [placeHolder sizeToFit];
     placeHolder.enabled=NO;
-    placeHolder.y=8;
+    placeHolder.x = 5;
+    placeHolder.y = 8;
     [self addSubview:placeHolder];
 }
 
@@ -109,17 +121,31 @@
     [self addSubview:self.toolBarView];
 }
 
-- (void) toolButtonClicked:(UIButton *)button {
-    self.toolButtonClick(button.tag);
+- (void)showEmotionView {
+    
+    if (self.editable) {
+        self.keyboard = NO;
+        [self endEditing:YES];
+        self.emotionView.hidden = NO;
+        self.toolBarView.y = self.emotionView.y-self.toolBarView.hei;
+        
+    }else {
+        self.keyboard = NO;
+        self.emotionView.hidden = NO;
+        self.toolBarView.y = self.emotionView.y-self.toolBarView.hei;
+    }
+        }
+
+- (void)hideEmotionView {
+    self.emotionView.hidden = YES;
+     self.keyboard = YES;
 }
 
-- (void) switchKeyboard:(UIButton *)button {
-    if (button.selected) {
-        //切回输入键盘
-    } else {
-        //切回表情键盘
-    }
+
+- (void) toolButtonClicked:(UIButton *)button {
+    self.toolButtonClick(button);
 }
+
 
 - (void) hidePlaceHolder:(NSNotification *)notify {
    
@@ -127,12 +153,14 @@
     
 }
 - (void) keyboardFrameChanged:(NSNotification *)notify {
-    NSValue *rectValue = notify.userInfo[UIKeyboardFrameEndUserInfoKey];
-    CGRect rect = [rectValue CGRectValue];
-    [UIView animateWithDuration:0.25 animations:^{
-        self.toolBarView.y = rect.origin.y-self.toolBarView.hei-64;
-    }];
-}
+    if (self.isKeyboard) {
+        NSValue *rectValue = notify.userInfo[UIKeyboardFrameEndUserInfoKey];
+        CGRect rect = [rectValue CGRectValue];
+        [UIView animateWithDuration:0.25 animations:^{
+            self.toolBarView.y = rect.origin.y-self.toolBarView.hei-64;
+        }];
+    }
+   }
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }

@@ -30,8 +30,8 @@
     WTXMStatusTextView *textView=[[WTXMStatusTextView alloc] initWithFrame:self.view.bounds];
     textView.delegate=self;
     __weak WTXMComposeViewController *myself=self;
-    textView.toolButtonClick = ^(ToolButtonRelated related){
-        [myself toolButtonClicked:related];
+    textView.toolButtonClick = ^(UIButton *button){
+        [myself toolButtonClicked:button];
     };
     [self.view addSubview:textView];
     self.textView = textView;
@@ -65,8 +65,8 @@
 }
 #pragma mark -工具栏按钮点击监听
 
-- (void) toolButtonClicked:(ToolButtonRelated)related {
-    switch (related) {
+- (void) toolButtonClicked:(UIButton *)button {
+    switch (button.tag) {
         case ToolButtonRelatedCamera:
             if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
                 
@@ -84,7 +84,7 @@
             
             break;
         case ToolButtonRelatedEmotion:
-            
+            [self switchKeyboard:button];
             break;
             
         default:
@@ -108,6 +108,21 @@
 }
     
 
+- (void) switchKeyboard:(UIButton *)button {
+    if (button.selected) {
+        [button setImage:[UIImage imageNamed:@"compose_emoticonbutton_background"] forState:UIControlStateNormal];
+        [button setImage:[UIImage imageNamed:@"compose_emoticonbutton_background_highlighted"] forState:UIControlStateHighlighted];
+        //切回输入键盘
+        [self.textView hideEmotionView];
+        [self.textView becomeFirstResponder];
+    } else {
+        [button setImage:[UIImage imageNamed:@"compose_keyboardbutton_background"] forState:UIControlStateNormal];
+        [button setImage:[UIImage imageNamed:@"compose_keyboardbutton_background_highlighted"] forState:UIControlStateHighlighted];
+        //切回表情键盘
+        [self.textView showEmotionView];
+    }
+    button.selected=!button.selected;
+}
 
 
 

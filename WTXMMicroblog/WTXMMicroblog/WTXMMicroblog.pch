@@ -26,5 +26,6 @@
 #import "WTXMDateTool.h"
 #import "UIImage+ImageEffects.h"
 #import "POP.h"
+#import "UIButton+WTXMHighlighted.h"
 #endif
 #endif

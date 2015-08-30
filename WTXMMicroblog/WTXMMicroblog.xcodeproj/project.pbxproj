@@ -52,6 +52,12 @@
 		0633951C1B7CBD8100898E73 /* WTXMMainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0633951B1B7CBD8100898E73 /* WTXMMainTabBarController.m */; };
 		0633951F1B7CBDA100898E73 /* WTXMBasicNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0633951E1B7CBDA100898E73 /* WTXMBasicNavigationController.m */; };
 		063395221B7CBEDB00898E73 /* WTXMTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 063395211B7CBEDB00898E73 /* WTXMTabBar.m */; };
+		0653364A1B92A34F00E0D57B /* WTXMEmotionPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 065336491B92A34F00E0D57B /* WTXMEmotionPageView.m */; };
+		0653364D1B92A37800E0D57B /* WTXMEmotionButtonsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0653364C1B92A37800E0D57B /* WTXMEmotionButtonsView.m */; };
+		065336501B92ADC400E0D57B /* UIButton+WTXMHighlighted.m in Sources */ = {isa = PBXBuildFile; fileRef = 0653364F1B92ADC400E0D57B /* UIButton+WTXMHighlighted.m */; };
+		06555DFE1B92C9E400E6B805 /* default in Resources */ = {isa = PBXBuildFile; fileRef = 06555DFB1B92C9E400E6B805 /* default */; };
+		06555DFF1B92C9E400E6B805 /* emoji in Resources */ = {isa = PBXBuildFile; fileRef = 06555DFC1B92C9E400E6B805 /* emoji */; };
+		06555E001B92C9E400E6B805 /* lxh in Resources */ = {isa = PBXBuildFile; fileRef = 06555DFD1B92C9E400E6B805 /* lxh */; };
 		06593AA11B8593C500F5B0E4 /* MJConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 06593A931B8593C500F5B0E4 /* MJConst.m */; };
 		06593AA21B8593C500F5B0E4 /* MJFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 06593A961B8593C500F5B0E4 /* MJFoundation.m */; };
 		06593AA31B8593C500F5B0E4 /* MJIvar.m in Sources */ = {isa = PBXBuildFile; fileRef = 06593A981B8593C500F5B0E4 /* MJIvar.m */; };
@@ -65,6 +71,7 @@
 		06593AB41B85F63A00F5B0E4 /* WTXMUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 06593AB31B85F63A00F5B0E4 /* WTXMUserModel.m */; };
 		0661F0D31B903E8400C73EB3 /* WTXMStatusPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 0661F0D21B903E8400C73EB3 /* WTXMStatusPhoto.m */; };
 		0661F0D61B903EA300C73EB3 /* WTXMStatusImagesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0661F0D51B903EA300C73EB3 /* WTXMStatusImagesView.m */; };
+		0661F0D91B907ADB00C73EB3 /* WTXMEmotionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0661F0D81B907ADB00C73EB3 /* WTXMEmotionView.m */; };
 		066290D61A54F65C004B5339 /* UIBarButtonItem+WTXM.m in Sources */ = {isa = PBXBuildFile; fileRef = 066290D51A54F65C004B5339 /* UIBarButtonItem+WTXM.m */; };
 		06729AED1B89D96D0061A00F /* WTXMHTTPTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 06729AEC1B89D96D0061A00F /* WTXMHTTPTool.m */; };
 		06729AF01B89EB690061A00F /* WTXMStatusesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 06729AEF1B89EB690061A00F /* WTXMStatusesModel.m */; };
@@ -219,8 +226,8 @@
 		061062091B8DD55600CF9091 /* TransformationMatrix.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TransformationMatrix.cpp; sourceTree = "<group>"; };
 		0610620A1B8DD55600CF9091 /* TransformationMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransformationMatrix.h; sourceTree = "<group>"; };
 		0610620B1B8DD55600CF9091 /* UnitBezier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitBezier.h; sourceTree = "<group>"; };
-		061062201B8DD60100CF9091 /* WTXMComposeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTXMComposeButton.h; sourceTree = "<group>"; };
-		061062211B8DD60100CF9091 /* WTXMComposeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTXMComposeButton.m; sourceTree = "<group>"; };
+		061062201B8DD60100CF9091 /* WTXMComposeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WTXMComposeButton.h; path = ../WTXMComposeButton.h; sourceTree = "<group>"; };
+		061062211B8DD60100CF9091 /* WTXMComposeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WTXMComposeButton.m; path = ../WTXMComposeButton.m; sourceTree = "<group>"; };
 		061062231B8DE05C00CF9091 /* compose.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = compose.plist; sourceTree = "<group>"; };
 		061062251B8DE08500CF9091 /* WTXMComposeButtonModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTXMComposeButtonModel.h; sourceTree = "<group>"; };
 		061062261B8DE08500CF9091 /* WTXMComposeButtonModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTXMComposeButtonModel.m; sourceTree = "<group>"; };
@@ -234,6 +241,15 @@
 		0633951E1B7CBDA100898E73 /* WTXMBasicNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTXMBasicNavigationController.m; sourceTree = "<group>"; };
 		063395201B7CBEDB00898E73 /* WTXMTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTXMTabBar.h; sourceTree = "<group>"; };
 		063395211B7CBEDB00898E73 /* WTXMTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTXMTabBar.m; sourceTree = "<group>"; };
+		065336481B92A34F00E0D57B /* WTXMEmotionPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTXMEmotionPageView.h; sourceTree = "<group>"; };
+		065336491B92A34F00E0D57B /* WTXMEmotionPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTXMEmotionPageView.m; sourceTree = "<group>"; };
+		0653364B1B92A37800E0D57B /* WTXMEmotionButtonsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTXMEmotionButtonsView.h; sourceTree = "<group>"; };
+		0653364C1B92A37800E0D57B /* WTXMEmotionButtonsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTXMEmotionButtonsView.m; sourceTree = "<group>"; };
+		0653364E1B92ADC400E0D57B /* UIButton+WTXMHighlighted.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+WTXMHighlighted.h"; sourceTree = "<group>"; };
+		0653364F1B92ADC400E0D57B /* UIButton+WTXMHighlighted.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+WTXMHighlighted.m"; sourceTree = "<group>"; };
+		06555DFB1B92C9E400E6B805 /* default */ = {isa = PBXFileReference; lastKnownFileType = folder; path = default; sourceTree = "<group>"; };
+		06555DFC1B92C9E400E6B805 /* emoji */ = {isa = PBXFileReference; lastKnownFileType = folder; path = emoji; sourceTree = "<group>"; };
+		06555DFD1B92C9E400E6B805 /* lxh */ = {isa = PBXFileReference; lastKnownFileType = folder; path = lxh; sourceTree = "<group>"; };
 		06593A921B8593C500F5B0E4 /* MJConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJConst.h; sourceTree = "<group>"; };
 		06593A931B8593C500F5B0E4 /* MJConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJConst.m; sourceTree = "<group>"; };
 		06593A941B8593C500F5B0E4 /* MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtension.h; sourceTree = "<group>"; };
@@ -257,10 +273,12 @@
 		06593AB01B85E79500F5B0E4 /* WTXMWindowTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTXMWindowTool.m; sourceTree = "<group>"; };
 		06593AB21B85F63A00F5B0E4 /* WTXMUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTXMUserModel.h; sourceTree = "<group>"; };
 		06593AB31B85F63A00F5B0E4 /* WTXMUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTXMUserModel.m; sourceTree = "<group>"; };
-		0661F0D11B903E8400C73EB3 /* WTXMStatusPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTXMStatusPhoto.h; sourceTree = "<group>"; };
-		0661F0D21B903E8400C73EB3 /* WTXMStatusPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTXMStatusPhoto.m; sourceTree = "<group>"; };
-		0661F0D41B903EA300C73EB3 /* WTXMStatusImagesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTXMStatusImagesView.h; sourceTree = "<group>"; };
-		0661F0D51B903EA300C73EB3 /* WTXMStatusImagesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTXMStatusImagesView.m; sourceTree = "<group>"; };
+		0661F0D11B903E8400C73EB3 /* WTXMStatusPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WTXMStatusPhoto.h; path = ../WTXMStatusPhoto.h; sourceTree = "<group>"; };
+		0661F0D21B903E8400C73EB3 /* WTXMStatusPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WTXMStatusPhoto.m; path = ../WTXMStatusPhoto.m; sourceTree = "<group>"; };
+		0661F0D41B903EA300C73EB3 /* WTXMStatusImagesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WTXMStatusImagesView.h; path = ../WTXMStatusImagesView.h; sourceTree = "<group>"; };
+		0661F0D51B903EA300C73EB3 /* WTXMStatusImagesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WTXMStatusImagesView.m; path = ../WTXMStatusImagesView.m; sourceTree = "<group>"; };
+		0661F0D71B907ADB00C73EB3 /* WTXMEmotionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WTXMEmotionView.h; path = ../WTXMEmotionView.h; sourceTree = "<group>"; };
+		0661F0D81B907ADB00C73EB3 /* WTXMEmotionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WTXMEmotionView.m; path = ../WTXMEmotionView.m; sourceTree = "<group>"; };
 		066290D41A54F65C004B5339 /* UIBarButtonItem+WTXM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+WTXM.h"; sourceTree = "<group>"; };
 		066290D51A54F65C004B5339 /* UIBarButtonItem+WTXM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+WTXM.m"; sourceTree = "<group>"; };
 		06729AEB1B89D96D0061A00F /* WTXMHTTPTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTXMHTTPTool.h; sourceTree = "<group>"; };
@@ -295,8 +313,8 @@
 		069DDDB41A55582F00163661 /* WTXMMicroblogTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WTXMMicroblogTests.m; sourceTree = "<group>"; };
 		06A006491A54D7C8009B1230 /* WTXMComposeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTXMComposeViewController.h; sourceTree = "<group>"; };
 		06A0064A1A54D7C8009B1230 /* WTXMComposeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTXMComposeViewController.m; sourceTree = "<group>"; };
-		06A0064C1A54F54B009B1230 /* WTXMStatusTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTXMStatusTextView.h; sourceTree = "<group>"; };
-		06A0064D1A54F54B009B1230 /* WTXMStatusTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTXMStatusTextView.m; sourceTree = "<group>"; };
+		06A0064C1A54F54B009B1230 /* WTXMStatusTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WTXMStatusTextView.h; path = ../WTXMStatusTextView.h; sourceTree = "<group>"; };
+		06A0064D1A54F54B009B1230 /* WTXMStatusTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WTXMStatusTextView.m; path = ../WTXMStatusTextView.m; sourceTree = "<group>"; };
 		06A20F951A54CD2900F51C95 /* WTXMBlogModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTXMBlogModel.h; sourceTree = "<group>"; };
 		06A20F961A54CD2A00F51C95 /* WTXMBlogModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTXMBlogModel.m; sourceTree = "<group>"; };
 		06A20F981B86DF4200F51C95 /* WTXMHomeFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTXMHomeFooterView.h; sourceTree = "<group>"; };
@@ -355,8 +373,8 @@
 		06E60BF21B8314B2009D1759 /* WTXMGuideController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTXMGuideController.m; sourceTree = "<group>"; };
 		06EF842B1B8C7AB200A11DA7 /* WTXMDateTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTXMDateTool.h; sourceTree = "<group>"; };
 		06EF842C1B8C7AB200A11DA7 /* WTXMDateTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTXMDateTool.m; sourceTree = "<group>"; };
-		06EF842E1B8C933900A11DA7 /* WTXMComposeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTXMComposeView.h; sourceTree = "<group>"; };
-		06EF842F1B8C933900A11DA7 /* WTXMComposeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTXMComposeView.m; sourceTree = "<group>"; };
+		06EF842E1B8C933900A11DA7 /* WTXMComposeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WTXMComposeView.h; path = ../WTXMComposeView.h; sourceTree = "<group>"; };
+		06EF842F1B8C933900A11DA7 /* WTXMComposeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WTXMComposeView.m; path = ../WTXMComposeView.m; sourceTree = "<group>"; };
 		06F5DAE41B7E12DC000E0391 /* WTXMHomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTXMHomeTableViewController.h; sourceTree = "<group>"; };
 		06F5DAE51B7E12DC000E0391 /* WTXMHomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTXMHomeTableViewController.m; sourceTree = "<group>"; };
 		06F5DAE71B7E1375000E0391 /* WTXMMessageTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTXMMessageTableViewController.h; sourceTree = "<group>"; };
@@ -598,6 +616,8 @@
 				066290D51A54F65C004B5339 /* UIBarButtonItem+WTXM.m */,
 				06A20FAD1B8715E800F51C95 /* UITabBarItem+BadgeValueImage.h */,
 				06A20FAE1B8715E800F51C95 /* UITabBarItem+BadgeValueImage.m */,
+				0653364E1B92ADC400E0D57B /* UIButton+WTXMHighlighted.h */,
+				0653364F1B92ADC400E0D57B /* UIButton+WTXMHighlighted.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -641,16 +661,8 @@
 		063394F81B7CBC4900898E73 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				06EF842E1B8C933900A11DA7 /* WTXMComposeView.h */,
-				06EF842F1B8C933900A11DA7 /* WTXMComposeView.m */,
-				061062201B8DD60100CF9091 /* WTXMComposeButton.h */,
-				061062211B8DD60100CF9091 /* WTXMComposeButton.m */,
-				06A0064C1A54F54B009B1230 /* WTXMStatusTextView.h */,
-				06A0064D1A54F54B009B1230 /* WTXMStatusTextView.m */,
-				0661F0D11B903E8400C73EB3 /* WTXMStatusPhoto.h */,
-				0661F0D21B903E8400C73EB3 /* WTXMStatusPhoto.m */,
-				0661F0D41B903EA300C73EB3 /* WTXMStatusImagesView.h */,
-				0661F0D51B903EA300C73EB3 /* WTXMStatusImagesView.m */,
+				065336461B92A2EF00E0D57B /* ComposeView */,
+				065336471B92A2EF00E0D57B /* StatusView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -935,6 +947,36 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		065336461B92A2EF00E0D57B /* ComposeView */ = {
+			isa = PBXGroup;
+			children = (
+				06EF842E1B8C933900A11DA7 /* WTXMComposeView.h */,
+				06EF842F1B8C933900A11DA7 /* WTXMComposeView.m */,
+				061062201B8DD60100CF9091 /* WTXMComposeButton.h */,
+				061062211B8DD60100CF9091 /* WTXMComposeButton.m */,
+			);
+			path = ComposeView;
+			sourceTree = "<group>";
+		};
+		065336471B92A2EF00E0D57B /* StatusView */ = {
+			isa = PBXGroup;
+			children = (
+				06A0064C1A54F54B009B1230 /* WTXMStatusTextView.h */,
+				06A0064D1A54F54B009B1230 /* WTXMStatusTextView.m */,
+				0661F0D11B903E8400C73EB3 /* WTXMStatusPhoto.h */,
+				0661F0D21B903E8400C73EB3 /* WTXMStatusPhoto.m */,
+				0661F0D41B903EA300C73EB3 /* WTXMStatusImagesView.h */,
+				0661F0D51B903EA300C73EB3 /* WTXMStatusImagesView.m */,
+				0661F0D71B907ADB00C73EB3 /* WTXMEmotionView.h */,
+				0661F0D81B907ADB00C73EB3 /* WTXMEmotionView.m */,
+				065336481B92A34F00E0D57B /* WTXMEmotionPageView.h */,
+				065336491B92A34F00E0D57B /* WTXMEmotionPageView.m */,
+				0653364B1B92A37800E0D57B /* WTXMEmotionButtonsView.h */,
+				0653364C1B92A37800E0D57B /* WTXMEmotionButtonsView.m */,
+			);
+			path = StatusView;
+			sourceTree = "<group>";
+		};
 		06593A911B8593C500F5B0E4 /* MJExtension */ = {
 			isa = PBXGroup;
 			children = (
@@ -1032,6 +1074,9 @@
 		069DDD981A55582E00163661 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				06555DFB1B92C9E400E6B805 /* default */,
+				06555DFC1B92C9E400E6B805 /* emoji */,
+				06555DFD1B92C9E400E6B805 /* lxh */,
 				069DDDA51A55582E00163661 /* Images.xcassets */,
 				061062231B8DE05C00CF9091 /* compose.plist */,
 				069DDD991A55582E00163661 /* Info.plist */,
@@ -1210,12 +1255,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06555DFE1B92C9E400E6B805 /* default in Resources */,
 				069DDDA41A55582E00163661 /* Main.storyboard in Resources */,
 				0610620C1B8DD55600CF9091 /* InfoPlist.strings in Resources */,
 				069DDDA91A55582E00163661 /* LaunchScreen.xib in Resources */,
 				06A20F9C1B86E84400F51C95 /* WTXMHomeFooterView.xib in Resources */,
 				069DDDA61A55582E00163661 /* Images.xcassets in Resources */,
 				061062241B8DE05C00CF9091 /* compose.plist in Resources */,
+				06555DFF1B92C9E400E6B805 /* emoji in Resources */,
+				06555E001B92C9E400E6B805 /* lxh in Resources */,
 				060CF93E1A54FF88006919A5 /* WTXMDiscoverSearchView.xib in Resources */,
 				0610620D1B8DD55600CF9091 /* pop-Info.plist in Resources */,
 			);
@@ -1297,6 +1345,7 @@
 				06593AA51B8593C500F5B0E4 /* NSObject+MJCoding.m in Sources */,
 				0633951C1B7CBD8100898E73 /* WTXMMainTabBarController.m in Sources */,
 				066290D61A54F65C004B5339 /* UIBarButtonItem+WTXM.m in Sources */,
+				0661F0D91B907ADB00C73EB3 /* WTXMEmotionView.m in Sources */,
 				060960D41B84A8EA004C57AC /* AFURLConnectionOperation.m in Sources */,
 				069BD93B1B8B1970006B57FD /* SDWaitingView.m in Sources */,
 				060960D51B84A8EA004C57AC /* AFURLRequestSerialization.m in Sources */,
@@ -1315,6 +1364,8 @@
 				06F5DAE61B7E12DC000E0391 /* WTXMHomeTableViewController.m in Sources */,
 				0610620E1B8DD55600CF9091 /* POPAnimatableProperty.mm in Sources */,
 				06A20FE01B8722EC00F51C95 /* SDWebImagePrefetcher.m in Sources */,
+				0653364A1B92A34F00E0D57B /* WTXMEmotionPageView.m in Sources */,
+				0653364D1B92A37800E0D57B /* WTXMEmotionButtonsView.m in Sources */,
 				06A20FB51B871DE400F51C95 /* WTXMHomeTableViewCell.m in Sources */,
 				06F5DAE91B7E1375000E0391 /* WTXMMessageTableViewController.m in Sources */,
 				06F5DAEC1B7E13FB000E0391 /* WTXMProfileTableViewController.m in Sources */,
@@ -1333,6 +1384,7 @@
 				061062111B8DD55600CF9091 /* POPAnimationExtras.mm in Sources */,
 				060CF93C1A54FF6A006919A5 /* WTXMDiscoverSearchView.m in Sources */,
 				06EF84301B8C933900A11DA7 /* WTXMComposeView.m in Sources */,
+				065336501B92ADC400E0D57B /* UIButton+WTXMHighlighted.m in Sources */,
 				061062161B8DD55600CF9091 /* POPCGUtils.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -28,7 +28,7 @@
         view.hidden=YES;
     }
     _imagePaths = imagePaths;
-    CGFloat space=8.0;
+    CGFloat space=10.0;
     NSInteger imageCol=3;
     CGFloat imageWH=([UIScreen mainScreen].bounds.size.width-4*space)/imageCol;
     
@@ -42,14 +42,14 @@
         img.photoInfo=imagePaths[i];
         int row=i/imageCol;
         int col=i%imageCol;
-        img.frame=CGRectMake(space+col*(imageWH+space),(imageWH+space)*row, imageWH, imageWH);
+        img.frame=CGRectMake(space+col*(imageWH+space),space + (imageWH+space)*row, imageWH, imageWH);
         UITapGestureRecognizer *recognizer=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageTap:)];
         [img addGestureRecognizer:recognizer];
         [self addSubview:img];
         self.imageViewHeight=CGRectGetMaxY(img.frame);
     }
 
-    
+
 }
 - (void)imageTap:(UITapGestureRecognizer *)recognizer {
     UIView *view=recognizer.view;

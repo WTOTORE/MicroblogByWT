@@ -72,20 +72,32 @@
     
     WTXMCellImagesView *imgView=[[WTXMCellImagesView alloc] init];
     imgView.imagePaths=blog.pic_urls;
-    self.imageViewF=CGRectMake(0, CGRectGetMaxY(self.textF)+MARGIN,[UIScreen mainScreen].bounds.size.width,imgView.imageViewHeight);
-    
+    if (imgView.imagePaths) {
+        self.imageViewF=CGRectMake(0, CGRectGetMaxY(self.textF),[UIScreen mainScreen].bounds.size.width,imgView.imageViewHeight);
+    }else {
+        self.imageViewF=CGRectZero;
+    }
    self.originateViewF=CGRectMake(0, 0, SCREEN_WIDTH, CGRectGetMaxY(self.textF)+imgView.imageViewHeight+MARGIN);
 }
 
 - (void) setRetweetViewFrame:(WTXMBlogModel *)retweetBlog {
+    if (!retweetBlog) {
+        self.retweetedViewF=CGRectZero;
+        return;
+    }
     CGSize textSize=[self getTextLabelWithText:retweetBlog.text FontSize:TEXT_FONT];
     self.retweetTextF=CGRectMake(MARGIN, MARGIN, textSize.width, textSize.height);
     
     WTXMCellImagesView *imgView=[[WTXMCellImagesView alloc] init];
     imgView.imagePaths=retweetBlog.pic_urls;
-    self.retweetImageViewF=CGRectMake(0, CGRectGetMaxY(self.retweetTextF)+MARGIN,[UIScreen mainScreen].bounds.size.width,imgView.imageViewHeight);
+    if (imgView.imagePaths) {
+        self.retweetImageViewF=CGRectMake(0, CGRectGetMaxY(self.retweetTextF),[UIScreen mainScreen].bounds.size.width,imgView.imageViewHeight);
+    }else {
+        self.retweetImageViewF=CGRectZero;
+    }
+   
     
-    self.retweetedViewF=CGRectMake(0, CGRectGetMaxY(self.originateViewF), SCREEN_WIDTH, CGRectGetMaxY(self.retweetImageViewF)+MARGIN);
+    self.retweetedViewF=CGRectMake(0, self.originateViewF.size.height, SCREEN_WIDTH, self.retweetTextF.size.height+MARGIN+imgView.imageViewHeight+MARGIN);
 }
 
 

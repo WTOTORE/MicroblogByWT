@@ -178,13 +178,8 @@
     self.sourceLabel.text=blog.source;
     self.sourceLabel.x=CGRectGetMaxX(self.timeLabel.frame)+MARGIN;
     self.originateTextLabel.text=blog.text;
-    if (blog.pic_urls) {
-        self.originateImagesView.hidden=NO;
-        self.originateImagesView.imagePaths=blog.pic_urls;
-    }else {
-        self.originateImagesView.hidden=YES;
-    }
-    
+    self.originateImagesView.imagePaths=blog.pic_urls;
+
 }
 - (void)setOriginalViewFrames:(WTXMStatusFrameModel *)statusFrame {
     self.iconView.frame=statusFrame.iconF;
@@ -200,20 +195,8 @@
 
 - (void)setRetweetViewData:(WTXMStatusFrameModel *)statusFrame {
     WTXMBlogModel *retweetBlog=statusFrame.blog.retweeted_status;
-    if (retweetBlog) {
-        self.retweetedView.hidden=NO;
         self.retweetTextLabel.text=retweetBlog.text;
-        if (retweetBlog.pic_urls) {
-            self.retweetImagesView.hidden=NO;
-            self.retweetImagesView.imagePaths=retweetBlog.pic_urls;
-        }else {
-            self.retweetImagesView.hidden=YES;
-        }
-
-    }else {
-        self.retweetedView.hidden=YES;
-    }
-    
+        self.retweetImagesView.imagePaths=retweetBlog.pic_urls;
 }
 
 - (void)setRetweetViewFrames:(WTXMStatusFrameModel *)statusFrame {
