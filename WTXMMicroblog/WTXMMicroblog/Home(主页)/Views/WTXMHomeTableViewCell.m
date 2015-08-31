@@ -143,7 +143,7 @@
     
     [self.contentView addSubview:self.operateView];
     self.spaceView = [UIView new];
-    self.spaceView.backgroundColor=[UIColor blueColor];
+    self.spaceView.backgroundColor=[UIColor grayColor];
     [self.contentView addSubview:self.spaceView];
 }
 

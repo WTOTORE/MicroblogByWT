@@ -22,7 +22,7 @@
 @implementation WTXMStatusTextView
 - (WTXMEmotionView *)emotionView {
     if (!_emotionView) {
-        CGFloat emotionHeight = 200;
+        CGFloat emotionHeight = 216;
         _emotionView= [[WTXMEmotionView alloc] initWithFrame:CGRectMake(0, self.hei-emotionHeight-64, self.wid, emotionHeight)];
         [self addSubview:_emotionView];
     }

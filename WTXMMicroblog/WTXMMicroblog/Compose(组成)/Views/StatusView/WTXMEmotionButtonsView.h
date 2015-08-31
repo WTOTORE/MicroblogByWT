@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#define WTXMEmotionButtonDidClickedNotification @"WTXMEmotionButtonDidClickedNotification"
+typedef NS_ENUM(NSUInteger, WTXMEmotionType) {
+    WTXMEmotionTypeRecent,
+    WTXMEmotionTypeDefault,
+    WTXMEmotionTypeEmoji,
+    WTXMEmotionTypeLxh
+};
 @interface WTXMEmotionButtonsView : UIView
 
 @end
