@@ -114,7 +114,6 @@
         [button setImage:[UIImage imageNamed:@"compose_emoticonbutton_background_highlighted"] forState:UIControlStateHighlighted];
         //切回输入键盘
         [self.textView hideEmotionView];
-        [self.textView becomeFirstResponder];
     } else {
         [button setImage:[UIImage imageNamed:@"compose_keyboardbutton_background"] forState:UIControlStateNormal];
         [button setImage:[UIImage imageNamed:@"compose_keyboardbutton_background_highlighted"] forState:UIControlStateHighlighted];

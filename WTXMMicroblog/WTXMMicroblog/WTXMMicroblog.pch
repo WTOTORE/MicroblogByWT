@@ -10,6 +10,8 @@
 #ifdef __OBJC__
 #define WTXMMicroblog_WTXMMicroblog_pch
 #define kVersion @"Version"
+#define WTXMEmotionDidClickedNotification @"WTXMEmotionDidClickedNotification"
+#define WTXMEmotionDleteButtonDidClickedNotification @"WTXMEmotionDleteButtonDidClickedNotification"
 #import "WTXMSkinImage.h"
 #import "UIView+WTXM.h"
 #import "UIBarButtonItem+WTXM.h"
@@ -27,5 +29,6 @@
 #import "UIImage+ImageEffects.h"
 #import "POP.h"
 #import "UIButton+WTXMHighlighted.h"
+#import "NSString+Emoji.h"
 #endif
 #endif

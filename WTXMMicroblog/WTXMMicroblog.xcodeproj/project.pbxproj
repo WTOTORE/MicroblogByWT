@@ -47,6 +47,7 @@
 		061062221B8DD60100CF9091 /* WTXMComposeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 061062211B8DD60100CF9091 /* WTXMComposeButton.m */; };
 		061062241B8DE05C00CF9091 /* compose.plist in Resources */ = {isa = PBXBuildFile; fileRef = 061062231B8DE05C00CF9091 /* compose.plist */; };
 		061062271B8DE08500CF9091 /* WTXMComposeButtonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 061062261B8DE08500CF9091 /* WTXMComposeButtonModel.m */; };
+		0616A7891B9410980079F304 /* NSString+Emoji.m in Sources */ = {isa = PBXBuildFile; fileRef = 0616A7881B9410980079F304 /* NSString+Emoji.m */; };
 		062653C21A5500DB002F7493 /* WTXMDiscoverTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 062653C11A5500DB002F7493 /* WTXMDiscoverTableViewController.m */; };
 		063395191B7CBC4900898E73 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0633950D1B7CBC4900898E73 /* AppDelegate.m */; };
 		0633951C1B7CBD8100898E73 /* WTXMMainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0633951B1B7CBD8100898E73 /* WTXMMainTabBarController.m */; };
@@ -233,6 +234,8 @@
 		061062231B8DE05C00CF9091 /* compose.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = compose.plist; sourceTree = "<group>"; };
 		061062251B8DE08500CF9091 /* WTXMComposeButtonModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTXMComposeButtonModel.h; sourceTree = "<group>"; };
 		061062261B8DE08500CF9091 /* WTXMComposeButtonModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTXMComposeButtonModel.m; sourceTree = "<group>"; };
+		0616A7871B9410980079F304 /* NSString+Emoji.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Emoji.h"; sourceTree = "<group>"; };
+		0616A7881B9410980079F304 /* NSString+Emoji.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Emoji.m"; sourceTree = "<group>"; };
 		062653C01A5500DB002F7493 /* WTXMDiscoverTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTXMDiscoverTableViewController.h; sourceTree = "<group>"; };
 		062653C11A5500DB002F7493 /* WTXMDiscoverTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTXMDiscoverTableViewController.m; sourceTree = "<group>"; };
 		0633950C1B7CBC4900898E73 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -610,6 +613,8 @@
 		063394F31B7CBC4900898E73 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0616A7871B9410980079F304 /* NSString+Emoji.h */,
+				0616A7881B9410980079F304 /* NSString+Emoji.m */,
 				061061D01B8DD48F00CF9091 /* UIImage+ImageEffects.h */,
 				061061D11B8DD48F00CF9091 /* UIImage+ImageEffects.m */,
 				060960D81B84AC0D004C57AC /* NSArray+Log.h */,
@@ -1325,6 +1330,7 @@
 				06A0064B1A54D7C8009B1230 /* WTXMComposeViewController.m in Sources */,
 				06555E0F1B92D57900E6B805 /* WTXMEmotionsPageView.m in Sources */,
 				060960D01B84A8EA004C57AC /* AFHTTPRequestOperationManager.m in Sources */,
+				0616A7891B9410980079F304 /* NSString+Emoji.m in Sources */,
 				061062101B8DD55600CF9091 /* POPAnimationEvent.mm in Sources */,
 				069BD93A1B8B1970006B57FD /* SDPhotoBrowser.m in Sources */,
 				0661F0D61B903EA300C73EB3 /* WTXMStatusImagesView.m in Sources */,

@@ -82,10 +82,10 @@
     [UIView animateWithDuration:0.25 animations:^{
         [self.buttons enumerateObjectsUsingBlock:^(WTXMComposeButton *obj, NSUInteger idx, BOOL *stop) {
             if (idx==button.tag) {
-                obj.transform=CGAffineTransformMakeScale(2.0, 2.0);
+                obj.transform=CGAffineTransformMakeScale(1.8, 1.8);
                 obj.alpha=0.1;
             }else {
-                obj.transform=CGAffineTransformMakeScale(0.5, 0.5);
+                obj.transform=CGAffineTransformMakeScale(0.3, 0.3);
                 obj.alpha=0.1;
             }
         }];
