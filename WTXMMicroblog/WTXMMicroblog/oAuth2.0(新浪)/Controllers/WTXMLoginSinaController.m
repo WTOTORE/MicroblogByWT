@@ -34,6 +34,7 @@
 #define APP_KEY @"2717459208"
 #define APP_SECRET @"d322aab81de02945ee7a3ffbbe838b33"
 #define REDIRECT_URI @"http://www.sina.com.cn"
+#import <AFNetworking/AFNetworking.h>
 @interface WTXMLoginSinaController ()<UIWebViewDelegate>
 
 @end
